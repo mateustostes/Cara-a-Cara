@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="shortcut icon" href="img/favicon.png" /> 
+    <script>
+        // Captura e analisa o nível de dificuldade selecionado pelo usuario na página "index.html"
+        function iniciar() {
+            let nivelDificuldade = localStorage.getItem("nivelDificuldade"); // essa informação virá do index.html
+            if (nivelDificuldade == null) // a pessoa abriu essa página ao invés da index.html
+                alert("Selecione o nível de dificuldade para jogar, a partir do index.html");
+            else exibirCartas(nivelDificuldade); // o nivel de dificuldade foi selecionado corretamente na página index.html
+        }
+
+        // Exibe a quantidade de cartas conforme o nível de dificuldade selecionado pelo usuario
+        function exibirCartas(nivelDificuldade) {
+            let nro_cartas;
+            let nroLinhas, nroColunas;
+            //console.log(nivelDificuldade);
+            switch(nivelDificuldade) {
+                case "0": // nivel fácil
+                    nroLinhas = nroColunas = 4;
+                break;
+                case "1":
+                case "2": // nivel medio e dificil
+                    nroLinhas = 4;
+                    nroColunas = 6;
+                break;
+                default:  // caso nao tenha selecionado nenhum nível será utilizado o nivel fácil
+                    nroLinhas = nroColunas = 4;
+                break;
+            }
+
+            var contadorCartas = 1;
+            //Estrutura para criar dinamicamente as cartas e inserí-las no corpo da pagina
+            for (let linha=0; linha<nroLinhas; linha++) {
+                var boxLinha = document.createElement("div");
+                boxLinha.setAttribute("id","matrizLinha"+linha);
+                document.getElementById("tabuleiro").appendChild(boxLinha);
+                for (let coluna=0; coluna<nroColunas; coluna++) {
+                    var imagem = document.createElement("img");
+                    imagem.setAttribute("src","cartasJogo/carta"+(contadorCartas++)+".png");
+                    imagem.setAttribute("width","100");
+                    document.getElementById("matrizLinha"+linha).appendChild(imagem);
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="iniciar()">
+    <div id="tabuleiro">
+    </div>
+</body>
+</html>

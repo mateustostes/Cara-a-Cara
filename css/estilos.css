@@ -1,0 +1,323 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    /* background: url('../img/fundoTabuleiro.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Luckiest Guy', cursive; */
+    color: white;
+}
+
+.bordaPadrao {
+    border-radius: 5px;
+    /* border:5px solid transparent; */
+    transition: all 0.2s;
+    box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.4);
+    margin-right: 7px;
+}
+
+.bordaPadrao:hover {
+    border: 5px solid rgb(255, 242, 18);
+    
+}
+
+.tabuleiro {
+    width: 650px;
+    margin: auto;
+    float: left;
+    text-align: center;
+    /* margin-top: 3em; */
+    margin-left: 3em;
+    height: 646px;
+    /* overflow: hidden; */
+}
+
+ul li {
+    list-style: none;
+}
+
+.visivel {
+    visibility: visible;
+}
+
+.invisivel {
+    visibility: hidden;
+}
+
+.statusMsgJogador {
+    border: 4px solid white;
+    border-radius: 10px;
+    background-color: rgba(0, 157, 230, 0.7);
+    margin-bottom: 1em;
+}
+
+#personagemSelecionado img {
+    box-shadow: 9px 10px 3px rgba(0, 0, 0, 0.4);
+    width: 55%;
+}
+
+#perg2 {
+    background-color: rgb(255, 242, 18);
+    color: rgb(224, 3, 21);
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    height: 3em;
+    width: 44em;
+    box-shadow: 5px 8px 9px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    font-family: 'Luckiest Guy', cursive;
+    letter-spacing: 3px;
+}
+
+#perg1 {
+    background-color: rgb(255, 242, 18);
+    color: rgb(224, 3, 21);
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    height: 3em;
+    width: 44em;
+    box-shadow: 5px 8px 9px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    font-family: 'Luckiest Guy', cursive;
+    letter-spacing: 3px;
+}
+
+#perg1:hover {
+    background-color: rgb(224, 3, 21);
+    color: rgb(255, 242, 18);
+}
+
+#perg2:hover {
+    background-color: rgb(224, 3, 21);
+    color: rgb(255, 242, 18);
+}
+
+#passarVez:hover {
+    background-color: rgb(224, 3, 21);
+    color: rgb(255, 242, 18);
+}
+
+#passarVez {
+    background-color: rgb(255, 242, 18);
+    color: rgb(224, 3, 21);
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    height: 3em;
+    width: 44em;
+    box-shadow: 5px 8px 9px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    font-family: 'Luckiest Guy', cursive;
+    letter-spacing: 3px;
+}
+
+#selAtributoPersonagem {
+    /* background: transparent; */
+    background-color: rgb(224, 3, 21);
+    width: 268px;
+    padding: 5px;
+    font-size: 16px;
+    color: white;
+    line-height: 1;
+    border: 0px;
+    border-radius: 5px;
+    box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
+    height: 2.5em;
+    text-align-last: center;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+#selValorAtributoPersonagem {
+    /* background: transparent; */
+    background-color: rgb(224, 3, 21);
+    width: 268px;
+    padding: 5px;
+    font-size: 16px;
+    color: white;
+    line-height: 1;
+    border: 0px;
+    border-radius: 5px;
+    box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
+    height: 2.5em;
+    text-align-last: center;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+#chuteJogador2 {
+    /* background: transparent; */
+    background-image: url("../img/chutar.png");
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(255, 242, 18);
+    color: white;
+    width: 90px;
+    height: 48px;
+    padding: 5px;
+    font-size: 20px;
+    line-height: 1;
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
+    cursor: pointer;
+}
+
+#chuteJogador1 {
+    /* background: transparent; */
+    background-image: url("../img/chutar.png");
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(237, 206, 20);
+    color: white;
+    width: 90px;
+    height: 48px;
+    padding: 5px;
+    font-size: 20px;
+    line-height: 1;
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
+    cursor: pointer;
+}
+
+#chuteJogador1:hover {
+    background-color: red;
+    width: 100px;
+    height: 58px;
+}
+
+#chuteJogador2:hover {
+    background-color: red;
+    width: 100px;
+    height: 58px;
+}
+
+.botaoSim {
+    /* background-color: rgb(0, 171, 185);
+    color:white;
+    border:none;
+    border-radius: 10px;
+    height: 3em;
+    width: 11em;
+    box-shadow: 5px 8px 9px rgba(0, 0, 0, 0.4); */
+    background: transparent;
+    background-image: url("../img/botaoSim.png");
+    background-size: 41%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: transparent;
+    width: 130px;
+    height: 70px;
+    padding: 5px 0 5px 5px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.botaoNao {
+    background: transparent;
+    background-image: url("../img/botaoNao.png");
+    background-size: 41%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: transparent;
+    width: 130px;
+    height: 70px;
+    padding: 5px 5px 5px 0;
+    border: 0px;
+    border-radius: 10px;
+    /* background-color: rgb(224, 3, 21);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 3em;
+    width: 11em;
+    box-shadow: 5px 8px 9px rgba(0, 0, 0, 0.4); */
+    cursor: pointer;
+}
+
+.botaoNao:hover,
+.botaoSim:hover {
+    width: 145px;
+}
+
+.formSimeNao {
+    margin: 23px 0;
+}
+
+.imgLogo {
+    padding-top: 5px!important;
+    padding-bottom: 10px!important;
+    text-align: center;
+}
+
+.imgLogo img {
+    width: 15em;
+}
+
+#personagemSelecionado ul {
+    display: none;
+}
+
+.temporizador {
+    background-image: url("../img/gifTempo.gif");
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    top: 34px;
+}
+
+.chutar {
+    position: relative;
+    top: 34px;
+}
+
+.temporizador span {
+    text-shadow: 1px 1px 1px black;
+    font-size: 34px;
+}
+
+#personagemSelecionado {
+    position: relative;
+    top: -70px;
+}
+
+.statusMsgJogadorAltura {
+    height: 109px;
+}
+
+.tituloAmarelo {
+    text-shadow: 2px 2px 1px black;
+    font-size: 24px;
+    color: rgb(255, 242, 18);
+}
+
+.alturaBox {
+    height: 229px;
+}
+
+.alturaBox2 {
+    height: 108px;
+}
+
+.todoOTabuleiro {
+    position: relative;
+    top: 3em;
+}
+
+:disabled {
+    background-color: rgb(230,231,232)!important;
+    color: rgb(114,115,118)!important;
+}

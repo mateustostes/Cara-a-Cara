@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ranking Cara a Cara</title>
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/wranking.css">
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <script type="text/javascript" src="js/cadastro.js"></script>
+
+    <!-- <script>
+        var nro = 1;
+        var cronSlideShow;
+
+        function iniciarSlide() {
+            cronSlideShow = setInterval(trocar, 400);
+        }
+
+        function trocar() {
+            (nro < 5) ? nro++ : nro = 1;
+            if (nro == 1) {
+                document.body.style.backgroundImage = "url('img/tela1.jpg')";
+                document.body.style.backgroundSize = "cover";
+            } else if (nro == 2) {
+                document.body.style.backgroundImage = "url('img/tela2.jpg')";
+                document.body.style.backgroundSize = "cover";
+            } else if (nro == 3) {
+                document.body.style.backgroundImage = "url('img/tela3.jpg')";
+                document.body.style.backgroundSize = "cover";
+            } else if (nro == 4) {
+                document.body.style.backgroundImage = "url('img/tela4.jpg')";
+                document.body.style.backgroundSize = "cover";
+            } else {
+                document.body.style.backgroundImage = "url('img/tela5.jpg')";
+                document.body.style.backgroundSize = "cover";
+            }
+
+        }
+
+        function pausar() {
+            clearInterval(cronSlideShow);
+        }
+
+        fechar = () =>{
+            window.close();
+            window.open('index.html','_blank');
+        }
+    </script> -->
+
+</head>
+
+<body onload="iniciarSlide(), atualizarRank()">
+    <div class="caixa">
+        <div class="container container1">
+            <div class="linha">
+                <div class="col-dg-4 PrimeiraLinha"><span class="caraacara">Cara a Cara</span></div>
+                <div class="col-dg-4 PrimeiraLinha"><img src="img/trofeu2.gif"></div>
+                <div class="col-dg-4 PrimeiraLinha"><span class="rankingGeral">Ranking Geral</span></div>
+            </div>
+        </div>
+        <div class="container container2">
+            <div class="linha">
+                <div class="col-dg-3 LinhaMenu"><span>Posição</span></div>
+                <div class="col-dg-3 LinhaMenu bordas"><span>Usuário</span></div>
+                <div class="col-dg-3 LinhaMenu"><span>Pontos</span></div>
+                <div class="col-dg-3 LinhaMenu"><span>Tempo Gasto</span></div>
+            </div>
+            <div class="linha linha2">
+                <div class="col-dg-3 linhaColocacao posicao"><span class="medalha"><img src="img/medalhaOuro.gif"
+                            style="width: 40px;"></span><span style="color:rgb(215, 216, 54)">1º</span></div>
+                <div class="col-dg-3 linhaColocacao bordas"><span id="nome0">-</span></div>
+                <div class="col-dg-3 linhaColocacao"><span id="ponto0">-</span></div>
+                <div class="col-dg-3 linhaColocacao"><span id="tempo0">-</span></div>
+            </div>
+            <div class="linha linha2">
+                <div class="col-dg-3 linhaColocacao posicao"><span class="medalha"><img src="img/medalhaPrata.gif"
+                            style="width: 40px;"></span><span style="color:rgb(213, 223, 234)">2º</span></div>
+                <div class="col-dg-3 linhaColocacao bordas"><span id="nome1">-</span></div>
+                <div class="col-dg-3 linhaColocacao"><span id="ponto1">-</span></div>
+                <div class="col-dg-3 linhaColocacao"><span id="tempo1">-</span></div>
+            </div>
+            <div class="linha linha2">
+                <div class="col-dg-3 linhaColocacao posicao"><span class="medalha"><img src="img/medalhaBronze.gif"
+                            style="width: 40px;"></span><span style="color:rgb(218, 153, 89)">3º</span></div>
+                <div class="col-dg-3 linhaColocacao bordas"><span id="nome2">-</span></div>
+                <div class="col-dg-3 linhaColocacao"><span id="ponto2">-</span></div>
+                <div class="col-dg-3 linhaColocacao"><span id="tempo2">-</span></div>
+            </div>
+            <div class="linha linha2">
+                <div class="col-dg-3 linhaColocacaoDois posicao"><span class="medalha"><img src="img/medalhaTodas.png"
+                            style="width: 40px;"></span><span>4º</span></div>
+                <div class="col-dg-3 linhaColocacaoDois bordas"><span id="nome3">-</span></div>
+                <div class="col-dg-3 linhaColocacaoDois"><span id="ponto3">-</span></div>
+                <div class="col-dg-3 linhaColocacaoDois"><span id="tempo3">-</span></div>
+            </div>
+            <div class="linha linha3">
+                <div class="col-dg-3 linhaColocacaoDois posicao"><span class="medalha"><img src="img/medalhaTodas.png"
+                            style="width: 40px;"></span><span>5º</span></div>
+                <div class="col-dg-3 linhaColocacaoDois bordas"><span id="nome4">-</span></div>
+                <div class="col-dg-3 linhaColocacaoDois"><span id="ponto4">-</span></div>
+                <div class="col-dg-3 linhaColocacaoDois"><span id="tempo4">-</span></div>
+            </div>
+        </div>
+        <div class="container container3">
+            <div class="linha">
+                <div class="col-dg-3 linhaUltimaColocacao" style="color:rgb(224,3,21);;">9º</div>
+                <div class="col-dg-3 linhaUltimaColocacao bordas">-</div>
+                <div class="col-dg-3 linhaUltimaColocacao">-</div>
+                <div class="col-dg-3 linhaUltimaColocacao"><span>-</span></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="linha">
+                <div class="col-dg-12"><input type="button" class="botoesUm" value="Jogar" onclick="fechar()"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
